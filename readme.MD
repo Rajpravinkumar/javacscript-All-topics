@@ -160,3 +160,9 @@ myPermission = myPermission | writePermission | readPermission;
 // use Ternary operator
 let message = (myPermission & readPermission) ? "yes" : "No";
 console.log(message);
+
+# Operators Precedence 
+let x = (2 + 5) * 10;  // 70
+let y = 2 + 5 * 10; // 52 precedence type
+console.log(y);
+console.log(x);
