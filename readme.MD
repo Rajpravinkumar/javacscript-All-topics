@@ -203,7 +203,8 @@ switch (true) {
     console.log("You can't afford mobile phone now ");
 }
 
-# Foor loops
+# Foor loop
+
 
 // for (initialExpress; condition; step ) {
     console.log("Number #1")
@@ -214,4 +215,14 @@ for (let i = 0; i <= 10; i++){
         console.log("Add number #" + i);
         
     }
+}
+
+# While Loop
+let i = 1;
+while (i <= 20) {
+    if (i %2 == 0) {
+        console.log("even Number #" + i);
+        
+    }
+    i++;
 }
