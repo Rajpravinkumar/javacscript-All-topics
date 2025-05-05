@@ -256,3 +256,11 @@ let array = ["red", "blue", "green "]
 for (let key in array) {
     console.log(array[key])
 }
+
+# For of loop
+
+let colors = ["red", "blue", "green"];
+for (let color of colors) {
+    console.log("color: " + color);
+    
+}

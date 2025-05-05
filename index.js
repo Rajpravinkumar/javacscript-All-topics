@@ -1,19 +1,7 @@
-// for - in 
-//use in object 
-const person = {
-    name: "anbu",
-    age: 24,
-    sex: "male"
+// For of loop
 
-}
-
-for (let key in person) {
-    console.log(key + " :" , person[key]);
+let colors = ["red", "blue", "green"];
+for (let color of colors) {
+    console.log("color: " + color);
     
-}
-// use in array 
-let array = ["red", "blue", "green "]
-
-for (let key in array) {
-    console.log(array[key])
 }
