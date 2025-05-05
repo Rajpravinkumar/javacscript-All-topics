@@ -1,16 +1,21 @@
-// Factory Function 
-function createPerson(name) {
-    return {
-        name,
-        greeting() {
-            let msg = `my name is ${this.name}`;
-            console.log(msg);
-        }
-    };
+// constructor funcation / class function
+/* function Person(name) {
+  this.name = name;
+  this.greerting = function () {
+    console.log(`My name is ${name}`);
+  };
 }
+let person = new Person("anbu");
+person.greerting(); */
 
-let anbu = createPerson("anbu");
-anbu.greeting();
-let anu = createPerson("anu")
-anu.greeting();
+class Person {
+    constructor(name) {
+        this.name = name;
+        this.greerting = function () {
+            console.log(`My name is ${name}`);
 
+        };
+    }
+}
+let person = new Person("anbu");
+person.greerting()
