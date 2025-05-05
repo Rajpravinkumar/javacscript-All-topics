@@ -1,21 +1,16 @@
-// java Script Object & OOP 
-//(Object Oriented Programming)
-
-let person = {
-    name: "raj",
-    age: 24,
-    sex: "male",
-    interest: ['Creating , teaching new things.'],
-    isAlive: true,
-    address: {
-        city: "chennai",
-        state: "TamilNadu"
-    },
-    greeting: function(){
-        let msg = `my Name is ${this.name}, I love ${this.interest}`;
-        console.log(msg)
-    }
-    
-    
+// Factory Function 
+function createPerson(name) {
+    return {
+        name,
+        greeting() {
+            let msg = `my name is ${this.name}`;
+            console.log(msg);
+        }
+    };
 }
-person.greeting();
+
+let anbu = createPerson("anbu");
+anbu.greeting();
+let anu = createPerson("anu")
+anu.greeting();
+
