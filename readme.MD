@@ -351,3 +351,17 @@ let name = new String("Anbu");
 let age = new Number(3);
 let isAlive = new  Boolean(true);
 console.log(name, age, isAlive);
+
+# function are objects
+
+function Person(name, age) {
+    this.name = name;
+    this.greeting = function () {
+        console.log(`My name is ${name}`);
+        
+    }
+}
+
+Person.call({}, "priya", "38")
+Person.apply({} , ["pavi", "23"])
+let person = new Person("anbu");
