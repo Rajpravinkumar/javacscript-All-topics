@@ -1,21 +1,12 @@
-// constructor funcation / class function
-/* function Person(name) {
-  this.name = name;
-  this.greerting = function () {
-    console.log(`My name is ${name}`);
-  };
-}
-let person = new Person("anbu");
-person.greerting(); */
+// Enumerating Properties of n Obejct 
+// primitive type vs Reference type 
+let cartObj = {
+    value: 5
+};
 
-class Person {
-    constructor(name) {
-        this.name = name;
-        this.greerting = function () {
-            console.log(`My name is ${name}`);
+function updateCart(cart) {
+    cart.value++;
 
-        };
-    }
 }
-let person = new Person("anbu");
-person.greerting()
+updateCart(cartObj);
+console.log("Cart available:", cartObj);

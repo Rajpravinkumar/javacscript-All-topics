@@ -324,3 +324,58 @@ class Person {
 }
 let person = new Person("anbu");
 person.greerting()
+
+# Dynamic Obejects 
+
+const person = {
+    name: "raj",
+    
+}
+person.age = 24;
+person.gender = "male"
+person.greeting - function () { }
+delete person.greeting;
+delete person.gender;
+console.log(person);
+
+# constructor Property
+/* 
+let name = "anbu"; // -> new String ("Anbu")
+let age = 24; // NumberLiterals -> new NUmber ()
+let isAlive = true; // BooleanLiterals -> new Boolean()
+ 
+console.log(name , age , isAlive);
+ */
+
+let name = new String("Anbu");
+let age = new Number(3);
+let isAlive = new  Boolean(true);
+console.log(name, age, isAlive);
+
+# function are objects
+
+function Person(name, age) {
+    this.name = name;
+    this.greeting = function () {
+        console.log(`My name is ${name}`);
+        
+    }
+}
+
+Person.call({}, "priya", "38")
+Person.apply({} , ["pavi", "23"])
+let person = new Person("anbu");
+
+# Enumerating Properties of n Obejct 
+// primitive type vs Reference type 
+
+let cartObj = {
+    value: 5
+};
+
+function updateCart(cart) {
+    cart.value++;
+
+}
+updateCart(cartObj);
+console.log("Cart available:", cartObj);
