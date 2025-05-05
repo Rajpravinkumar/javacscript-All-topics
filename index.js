@@ -1,13 +1,12 @@
-// function are objects
+// Enumerating Properties of n Obejct 
+// primitive type vs Reference type 
+let cartObj = {
+    value: 5
+};
 
-function Person(name, age) {
-    this.name = name;
-    this.greeting = function () {
-        console.log(`My name is ${name}`);
-        
-    }
+function updateCart(cart) {
+    cart.value++;
+
 }
-
-Person.call({}, "priya", "38")
-Person.apply({} , ["pavi", "23"])
-let person = new Person("anbu");
+updateCart(cartObj);
+console.log("Cart available:", cartObj);
