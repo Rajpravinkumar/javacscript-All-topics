@@ -1,21 +1,12 @@
-// constructor funcation / class function
-/* function Person(name) {
-  this.name = name;
-  this.greerting = function () {
-    console.log(`My name is ${name}`);
-  };
-}
-let person = new Person("anbu");
-person.greerting(); */
+// Dynamic Obejects 
 
-class Person {
-    constructor(name) {
-        this.name = name;
-        this.greerting = function () {
-            console.log(`My name is ${name}`);
-
-        };
-    }
+const person = {
+    name: "raj",
+    
 }
-let person = new Person("anbu");
-person.greerting()
+person.age = 24;
+person.gender = "male"
+person.greeting - function () { }
+delete person.greeting;
+delete person.gender;
+console.log(person);
