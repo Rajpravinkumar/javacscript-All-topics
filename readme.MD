@@ -235,3 +235,92 @@ do {
     }
 i++
 } while (i <= 10  )
+
+# for - in 
+//use in object 
+const person = {
+    name: "anbu",
+    age: 24,
+    sex: "male"
+
+}
+
+for (let key in person) {
+    console.log(key + " :" , person[key]);
+    
+}
+
+// use in array 
+let array = ["red", "blue", "green "]
+
+for (let key in array) {
+    console.log(array[key])
+}
+
+# For of loop
+
+let colors = ["red", "blue", "green"];
+for (let color of colors) {
+    console.log("color: " + color);
+    
+}
+
+# java Script Object & OOP 
+# (Object Oriented Programming)
+
+let person = {
+    name: "raj",
+    age: 24,
+    sex: "male",
+    interest: ['Creating , teaching new things.'],
+    isAlive: true,
+    address: {
+        city: "chennai",
+        state: "TamilNadu"
+    },
+    greeting: function(){
+        let msg = `my Name is ${this.name}, I love ${this.interest}`;
+        console.log(msg)
+    }
+    
+    
+}
+person.greeting();
+
+# Factory Function 
+function createPerson(name) {
+    return {
+        name,
+        greeting() {
+            let msg = `my name is ${this.name}`;
+            console.log(msg);
+        }
+    };
+}
+
+let anbu = createPerson("anbu");
+anbu.greeting();
+let anu = createPerson("anu")
+anu.greeting();
+
+#  constructor funcation / class function
+/* function Person(name) {
+  this.name = name;
+  this.greerting = function () {
+    console.log(`My name is ${name}`);
+  };
+}
+let person = new Person("anbu");
+person.greerting(); */
+
+class Person {
+    constructor(name) {
+        this.name = name;
+        this.greerting = function () {
+            console.log(`My name is ${name}`);
+
+        };
+    }
+}
+let person = new Person("anbu");
+person.greerting()

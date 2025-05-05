@@ -1,8 +1,21 @@
-// do while loop 
-let i = 0;
-do {
-    if (i % 2 !== 0) {
-        console.log("Odd number D0-while #" + i);
+// constructor funcation / class function
+/* function Person(name) {
+  this.name = name;
+  this.greerting = function () {
+    console.log(`My name is ${name}`);
+  };
+}
+let person = new Person("anbu");
+person.greerting(); */
+
+class Person {
+    constructor(name) {
+        this.name = name;
+        this.greerting = function () {
+            console.log(`My name is ${name}`);
+
+        };
     }
-i++
-} while (i <= 10  )
+}
+let person = new Person("anbu");
+person.greerting()
