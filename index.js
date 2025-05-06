@@ -1,12 +1,15 @@
-// Enumerating Properties of n Obejct 
-// primitive type vs Reference type 
-let cartObj = {
-    value: 5
-};
+// Cloning an JavaScript Object 
 
-function updateCart(cart) {
-    cart.value++;
+let user = {
+    name: "anbu ",
+    getFullName() {
+        console.log(`My name is ${this.name}`)
+    }
 
 }
-updateCart(cartObj);
-console.log("Cart available:", cartObj);
+//Spread operators 
+let anotherName = {...user}
+/* let anotherName = Object.assign({age : 23}, user);
+console.log(anotherName);
+ */
+console.log(anotherName)

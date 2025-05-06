@@ -366,7 +366,7 @@ Person.call({}, "priya", "38")
 Person.apply({} , ["pavi", "23"])
 let person = new Person("anbu");
 
-# Enumerating Properties of n Obejct 
+# Enumerating Properties of an Obejct 
 // primitive type vs Reference type 
 
 let cartObj = {
