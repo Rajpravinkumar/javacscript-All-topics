@@ -1,4 +1,4 @@
-// Finding  element to an JavaScript Array
+// Finding  element to an JavaScript Array (Primitives)
 
 const items = ["apple ", "Lemon", "Grapes"];
 

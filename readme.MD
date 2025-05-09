@@ -498,7 +498,7 @@ number.unshift("gauva")
 number.splice(3 , 0 , "Watermelons", "Bananas")
 console.log(number);
 
-# Finding  element to an JavaScript Array
+# Finding  element to an JavaScript Array [Primitives]
 
 const items = ["apple ", "Lemon", "Grapes"];
 
