@@ -472,3 +472,19 @@ console.log(message2);
 
 # DSA data structure and algorithms
 Data Structures and Algorithms (DSA) is a fundamental part of Computer Science that teaches you how to think and solve complex problems systematically. Using the right data structure and algorithm makes your program run faster, especially when working with lots of data.
+
+# Date Object
+const ddate = Date();
+
+const now = new Date();
+const anotherDate = new Date('july 6 1996')
+console.log(ddate);
+console.log(now.getFullYear());
+console.log(anotherDate.getFullYear())
+// odject destructing 
+let [month, date, year] = new Date().toLocaleDateString("en-us").split("/");
+
+// other type 
+console.log( new Date().toLocaleDateString("en-us").split("/"));
+
+console.log(month , date ,year);

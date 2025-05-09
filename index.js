@@ -1,10 +1,15 @@
-// Template Literials 
-// string primitives 
-const name = "Trisha";
-//old type
-const message = "Thank you" + name + 'for reading \n"programing" ';
-// new types  template literials
-const message2 = `Hello ${name} , Thank you for reading this "programing" `
+// Date Object
+const ddate = Date();
 
-console.log(message)
-console.log(message2);
+const now = new Date();
+const anotherDate = new Date('july 6 1996')
+console.log(ddate);
+console.log(now.getFullYear());
+console.log(anotherDate.getFullYear())
+// odject destructing 
+let [month, date, year] = new Date().toLocaleDateString("en-us").split("/");
+
+// other type 
+console.log( new Date().toLocaleDateString("en-us").split("/"));
+
+console.log(month , date ,year);
