@@ -1,15 +1,8 @@
-// Date Object
-const ddate = Date();
+// Adding elemrnt to an JavaScript Array
 
-const now = new Date();
-const anotherDate = new Date('july 6 1996')
-console.log(ddate);
-console.log(now.getFullYear());
-console.log(anotherDate.getFullYear())
-// odject destructing 
-let [month, date, year] = new Date().toLocaleDateString("en-us").split("/");
-
-// other type 
-console.log( new Date().toLocaleDateString("en-us").split("/"));
-
-console.log(month , date ,year);
+const number = ["apple ", "Lemon", "Grapes"];
+//push , unshift , splice 
+number.push("Oragne", "Strawberries");
+number.unshift("gauva")
+number.splice(3 , 0 , "Watermelons", "Bananas")
+console.log(number);
