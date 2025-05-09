@@ -1,10 +1,5 @@
-// Template Literials 
-// string primitives 
-const name = "Trisha";
-//old type
-const message = "Thank you" + name + 'for reading \n"programing" ';
-// new types  template literials
-const message2 = `Hello ${name} , Thank you for reading this "programing" `
+// Finding  element to an JavaScript Array
 
-console.log(message)
-console.log(message2);
+const items = ["apple ", "Lemon", "Grapes"];
+
+console.log(items.includes('Lemon'));
