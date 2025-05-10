@@ -1,18 +1,14 @@
-// Emptying an javaScript Array 
+// Combining & Etracting elements Array 
 
-let  numbers = [1, 2, 3, 4,];
+const shopping_cart = [ {item: "Magi"}];
+const additional_cart = ["Macthbox", "Salt", "Beans", "Masala"];
+// Combine
+let recipe = shopping_cart.concat(additional_cart);
+shopping_cart[0].item = "Noodles";
 
-let another_numbers = numbers;
-//solution 1 
-numbers = [];
+// Extract
+let extractedInfo = recipe.slice(1, 3);
 
-//solution 2 
-numbers.length = 0;
+console.log(extractedInfo);
 
-//solution 3 
-numbers.splice(0, numbers.length);
-
-//solution 4 
-while (numbers.length) numbers.pop();
-
-console.log(numbers);
+console.log(recipe);
