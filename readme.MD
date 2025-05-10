@@ -498,8 +498,71 @@ number.unshift("gauva")
 number.splice(3 , 0 , "Watermelons", "Bananas")
 console.log(number);
 
-# Finding  element to an JavaScript Array
+# Finding  element to an JavaScript Array [Primitives]
 
 const items = ["apple ", "Lemon", "Grapes"];
 
 console.log(items.includes('Lemon'));
+
+# Finding  element to an JavaScript Array (references)
+
+
+
+const orders = [
+    
+    {id:1 , item:"Apple", quantity: 3},
+    {id:2, item:"Carrot", quantity: 6},
+    {id:3 , item:"onion", quantity: 10},
+]
+
+let result = orders.find(function (order) {
+   return order.item === "Carrot"
+}) 
+
+console.log(result);
+
+#  Arrow function
+
+
+
+const orders = [
+    
+    {id:1 , item:"Apple", quantity: 3},
+    {id:2, item:"Carrot", quantity: 6},
+    {id:3 , item:"onion", quantity: 10},
+]
+
+let result = orders.find( (order) => order.item === "Carrot")
+console.log(result);
+
+# Removing an Elemrnt in Array 
+
+const number = [1, 2, 3, 4];
+
+//push(end) - (pop) , 
+number.pop()
+//unshift(start) - shift
+number.shift()
+//middile(splice)
+number.splice(1,2)
+
+console.log(number);
+
+# Emptying an javaScript Array 
+
+let  numbers = [1, 2, 3, 4,];
+
+let another_numbers = numbers;
+//solution 1 
+numbers = [];
+
+//solution 2 
+numbers.length = 0;
+
+//solution 3 
+numbers.splice(0, numbers.length);
+
+//solution 4 
+while (numbers.length) numbers.pop();
+
+console.log(numbers);
