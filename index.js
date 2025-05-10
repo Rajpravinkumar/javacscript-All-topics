@@ -1,4 +1,4 @@
-// Finding  element to an JavaScript Array (references)
+// Arrow function
 
 
 
@@ -9,8 +9,5 @@ const orders = [
     {id:3 , item:"onion", quantity: 10},
 ]
 
-let result = orders.find(function (order) {
-   return order.item === "Carrot"
-}) 
-
+let result = orders.find( (order) => order.item === "Carrot")
 console.log(result);
