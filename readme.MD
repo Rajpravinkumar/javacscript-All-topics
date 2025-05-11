@@ -594,3 +594,9 @@ shopping_cart[0].item = "Noodles";
 
 console.log(recipe);
 
+# Iterating Elements 
+
+const dailyRoutine = ["Wakeup", "Eat", "Sleep"];
+
+//ForEach method 
+dailyRoutine.forEach(routine => console.log(routine));
