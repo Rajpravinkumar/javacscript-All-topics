@@ -1,6 +1,6 @@
 // Join and Split 
 
-let postTittle = "This is my post!".toUpperCase();
+let postTittle = "This is my post!".toLowerCase;
 
 let postSlug = postTittle.split(" ");
 

@@ -600,3 +600,38 @@ const dailyRoutine = ["Wakeup", "Eat", "Sleep"];
 
 //ForEach method 
 dailyRoutine.forEach(routine => console.log(routine));
+
+# Join and Split 
+
+let postTittle = "This is my post!".toLowerCase;
+
+let postSlug = postTittle.split(" ");
+
+let finalSlug = postSlug.join('_');
+
+//console.log(postSlug);
+console.log(finalSlug);
+
+
+# sorting an Array 
+
+const student = [
+  { id: 3, name: "Senthil" },
+  { id: 8, name: "Guna" },
+  { id: 1, name: "Anbu" },
+]
+
+student.sort((a, b) => {
+    nameA = a.name.toLowerCase();
+    nameB = b.name.toLowerCase();
+
+    // a < b => -1
+    if (nameA < nameB); return -1;
+
+    // a> b => 1
+    if (nameA > nameB); return 1;
+    // a === b => 0 
+    return 0;
+})
+
+console.log(student);
