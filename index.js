@@ -1,6 +1,11 @@
-// Iterating Elements 
+// Join and Split 
 
-const dailyRoutine = ["Wakeup", "Eat", "Sleep"];
+let postTittle = "This is my post!".toUpperCase();
 
-//ForEach method 
-dailyRoutine.forEach(routine => console.log(routine));
+let postSlug = postTittle.split(" ");
+
+let finalSlug = postSlug.join('_');
+
+//console.log(postSlug);
+console.log(finalSlug);
+
