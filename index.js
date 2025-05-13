@@ -1,12 +1,15 @@
-// filtering a javascript Array 
+// Mapping a javascript Array
 
-const cart_items = [
-    { id: 1, items: "Android Mobile", cost: 6500 },
-    { id: 2, items: "I Phone Mobile", cost: 25000 },
-    { id: 3, items: "Windows Mobile", cost: 8500 },
-    
-]
+const pepole = [
+  { id: 1, first_name: "Ajith", last_name: "kumar" },
+  { id: 2, first_name: "Anbu", last_name: "Selvan" },
+  { id: 3, first_name: "Trisha", last_name: "Grace" },
+  { id: 4, first_name: "Seetha", last_name: "Raman" },
+];
 
-let affortable_phones = cart_items.findIndex((Value) => Value.cost > 10000)
-//let affortable_phones = cart_items.find((Value) => Value.cost > 10000); 
-console.log("Affortable Phone:" , affortable_phones);
+let final = pepole.map((val) => {
+    let fullName = [val.id , val.first_name, val.last_name].join(" ");
+    let obj = { id: val.id , fullName}
+    return obj;
+});
+console.log(final);
