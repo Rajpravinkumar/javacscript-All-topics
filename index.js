@@ -1,22 +1,17 @@
 // Javascript Arrays Interview
-// -> 2) Take the below array and copy it using the slice method and the for loop method.
-
+// -> 3) Empty this array:
 var array = [1, 2, 3, 4, 5];
-//slice
-let result = array.slice();
-console.log(result);
+//method 1
+array = [];
 
-// for lop method
-
-let tempArray = [];
-for (let i = 0; i < array.length; i++) {
-    tempArray[i] = array[i];
+//method 2
+array.length = 0;
+ //method 3
+while (array.length) {
+  array.pop();
 }
 
-console.log(tempArray);
+//method 4 
+array.splice(0, array.length);
 
-// spread operators 
-
-let spread = [...array]
-console.log(spread);
-
+console.log(array);
