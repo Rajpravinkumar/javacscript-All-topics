@@ -874,3 +874,24 @@ console.log(tempArray);
 let spread = [...array]
 console.log(spread);
 
+# -> 3) Empty this array:
+var array = [1, 2, 3, 4, 5];
+//method 1
+array = [];
+
+//method 2
+array.length = 0;
+ //method 3
+while (array.length) {
+  array.pop();
+}
+
+//method 4 
+array.splice(0, array.length);
+
+console.log(array);
+
+# -> 4) What type is an Array set to?
+var array = [1, 2, 3, 4, 5];
+
+console.log(typeof array);
