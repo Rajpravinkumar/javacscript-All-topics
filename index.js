@@ -1,11 +1,18 @@
-// Join and Split 
+// Primitives Testing Java Script Array
 
-let postTittle = "This is my post!".toLowerCase;
+//Testing is it Odd or Even 
 
-let postSlug = postTittle.split(" ");
+const numbers = [1, 2, 3, 4, 5];
 
-let finalSlug = postSlug.join('_');
+// two type of method (every() , some())
 
-//console.log(postSlug);
-console.log(finalSlug);
+let isEven = numbers.every(function (value){
 
+    return value % 2 === 0;
+});
+console.log("isEven:", isEven);
+
+let isOdd = numbers.some(function (value) {
+    return value % 2 === 1;
+});
+console.log("isOdd:" , isOdd);
