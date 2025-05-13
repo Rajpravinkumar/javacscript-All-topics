@@ -1,20 +1,15 @@
-// JavaScript :
-//sort(), find(), vs filter vs map () vs reduce
-const numbers = [34, 4, 65, 12, 78];
-//sort
-/* let result = numbers.sort(); */
-
-//find
-/* let result = numbers.find((value) => value > 50 ) */
-//filter
-/* let result = numbers.filter((value) => value > 50); */
-//map
-/* let result = numbers.map((value) => {
-    return  "#" + value
-}) */
-//reduce
- let result = numbers.reduce((acc, val ) => {
-  return acc + val;
-});
- 
-console.log(result);
+// Javascript Arrays Interview
+// -> 1) Create an Array object
+//method 1 
+var products = ["Apple", "Notebook"];
+console.log(products); // (2) ['Apple', 'Notebook']
+//method 2
+var msgArray = [];
+msgArray[0] = "Hello";
+console.log(msgArray); //['Hello']
+//method 3
+var array = new Array("Hello");
+console.log(array); // ['Hello']
+//method 4 
+var another = Array.of(1, 2, 3);
+console.log(another); // (3) [1, 2, 3]
