@@ -837,8 +837,8 @@ const numbers = [34, 4, 65, 12, 78];
  
 console.log(result);
 
-# Javascript Arrays Interview
-##  -> 1) Create an Array object
+## Javascript Arrays Interview
+#  -> 1) Create an Array object
 //method 1 
 var products = ["Apple", "Notebook"];
 console.log(products); // (2) ['Apple', 'Notebook']
@@ -852,3 +852,25 @@ console.log(array); // ['Hello']
 //method 4 
 var another = Array.of(1, 2, 3);
 console.log(another); // (3) [1, 2, 3]
+
+# -> 2) Take the below array and copy it using the slice method and the for loop method.
+
+var array = [1, 2, 3, 4, 5];
+//slice
+let result = array.slice();
+console.log(result);
+
+//for lop method
+
+let tempArray = [];
+for (let i = 0; i < array.length; i++) {
+    tempArray[i] = array[i];
+}
+
+console.log(tempArray);
+
+// spread operators 
+
+let spread = [...array]
+console.log(spread);
+
