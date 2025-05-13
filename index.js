@@ -1,22 +1,11 @@
-// Testing elements in javascript Array (Reference types )
-const items = [
-    { id: 1, name: "Mobiles", isDeliverable: true },
-    { id: 2, name: "Accessories", isDeliverable: true },
-    { id: 3, name: "Laptop", isDeliverable: false },
-    { id: 4, name: "AC", isDeliverable: true },
-    { id: 5, name: "T.V", isDeliverable: false },
+// filtering a javascript Array 
+
+const cart_items = [
+    { id: 1, items: "Android Mobile", cost: "6500" },
+    { id: 2, items: "I Phone Mobile", cost: "25000" },
+    { id: 3, items: "Windows Mobile", cost: "8500" },
     
 ]
- //every () - method
-let allDeliverables = items.every(function (value) {
-    return value.isDeliverable == true;
-});
 
-console.log(allDeliverables);
-
-// some () - method  
-let notDeliverables = items.some(function (value) {
-  return value.isDeliverable == false;
-});
-
-console.log(notDeliverables);
+let affortable_phones = cart_items.filter((Value) => Value.cost < 10000)
+console.log("Affortable Phone:" , affortable_phones);
