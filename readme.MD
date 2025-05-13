@@ -719,3 +719,47 @@ let final = pepole.map((val) => {
     return obj;
 });
 console.log(final);
+
+# JavaScript Chaining Methods
+
+let products = [
+  { id: 1, tittle: "Android Phone", cost: 7500 },
+  { id: 2, tittle: "Gaming Computer", cost: 90500 },
+  { id: 3, tittle: "HeadPhone", cost: 2400 },
+];
+
+//sorting it using lowest price.
+let lowest_price = products.sort(function (a, b) {
+    // a - b (ascending) ,  b - a (descending)
+    return a.cost - b.cost;
+})
+
+
+// sort it by tittle ascending 
+
+let sortByTittle = lowest_price.sort(function (a, b)
+{
+    // a < b = -1
+    if (a.tittle < b.tittle) return -1;
+
+    // a > b = 1
+    if (a.tittle > b.tittle) return 1;
+
+    return 1;
+}) 
+
+
+//filter it by products less than 8000 
+
+let filtered = sortByTittle.filter(function (val) {
+    return val.cost <= 8000
+});
+
+
+// map it like this : // Android phone -7500 
+
+let final = filtered.map(function (val) {
+    return val.tittle + " - $" + val.cost;
+        
+});
+console.log(final);
