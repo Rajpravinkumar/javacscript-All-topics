@@ -1,27 +1,25 @@
-// JavaScript Chaining Methods
+// JavaScript arrays - reduce method
 
-let products = [
-  { id: 1, tittle: "Android Phone", cost: 7500 },
-  { id: 2, tittle: "Gaming Computer", cost: 90500 },
-  { id: 3, tittle: "HeadPhone", cost: 2400 },
+
+// reduce method in references
+const shoppingCart = [
+  { id: 1, item: "Organic Milk", cost: 45 },
+  { id: 2, item: "Bread", cost: 20 },
+  { id: 3, item: "Maagi", cost: 12 },
 ];
 
-//sorting it using lowest price.
-let final = products.sort((a, b) => {
-    // a - b (ascending) ,  b - a (descending)
-    return a.cost - b.cost;
-}).sort((a, b) => {
-    // a < b = -1
-    if (a.tittle < b.tittle) return -1;
+const addCost = (accumlator, currentval) => accumlator + currentval.cost;
 
-    // a > b = 1
-    if (a.tittle > b.tittle) return 1;
 
-    return 1;
-})
-.filter((val) => val.cost <= 8000) 
-.map( (val) =>  val.tittle + " - $" + val.cost);
-        
-// map it like this : // Android phone -7500 
-console.log(final);
+let totalaCost = shoppingCart.reduce( addCost, 10 )
 
+console.log("Total values : ", totalaCost);
+
+//reduce method in primitives 
+
+const donation = [323, 324, 554, 412, 543];
+
+let totalDonation = donation.reduce(function (previousVal, currentval) {
+    return previousVal + currentval;
+});
+console.log("TotalDonations:" , totalDonation);
