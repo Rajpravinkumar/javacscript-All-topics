@@ -1,25 +1,20 @@
-// JavaScript arrays - reduce method
+// JavaScript :
+//sort(), find(), vs filter vs map () vs reduce
+const numbers = [34, 4, 65, 12, 78];
+//sort
+/* let result = numbers.sort(); */
 
-
-// reduce method in references
-const shoppingCart = [
-  { id: 1, item: "Organic Milk", cost: 45 },
-  { id: 2, item: "Bread", cost: 20 },
-  { id: 3, item: "Maagi", cost: 12 },
-];
-
-const addCost = (accumlator, currentval) => accumlator + currentval.cost;
-
-
-let totalaCost = shoppingCart.reduce( addCost, 10 )
-
-console.log("Total values : ", totalaCost);
-
-//reduce method in primitives 
-
-const donation = [323, 324, 554, 412, 543];
-
-let totalDonation = donation.reduce(function (previousVal, currentval) {
-    return previousVal + currentval;
+//find
+/* let result = numbers.find((value) => value > 50 ) */
+//filter
+/* let result = numbers.filter((value) => value > 50); */
+//map
+/* let result = numbers.map((value) => {
+    return  "#" + value
+}) */
+//reduce
+ let result = numbers.reduce((acc, val ) => {
+  return acc + val;
 });
-console.log("TotalDonations:" , totalDonation);
+ 
+console.log(result);
