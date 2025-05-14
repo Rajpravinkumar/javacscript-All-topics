@@ -1,16 +1,20 @@
-const userMethods = {
-  greet() {
-    console.log(`Hi, I'm ${this.name}`);
-  },
-};
+//Inheritance 
+class Animal {
+    constructor(name) {
+        this.name = name;
+    
+    }
 
-function createUser(name) {
-  const user = Object.create(userMethods);
-  user.name = name;
-  return user;
+
+    speak() {
+        console.log(`${this.name} makes a sound`);
+    
+    }
 }
 
-const u1 = createUser("anbu");
-u1.greet();
-const u2 = createUser("anu");
-u2.greet();
+class Dog extends Animal {
+    speak() {
+        console.log(`${this.name} barks.`);
+        
+    }
+}
