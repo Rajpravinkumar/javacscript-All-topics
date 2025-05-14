@@ -1,7 +1,7 @@
-//Dynamic Objects
+# Dynamic Objects
 let person = {};
 
-//add properties dynamically
+// add properties dynamically
 person.name = "Alice";
 person.age = 20;
 
