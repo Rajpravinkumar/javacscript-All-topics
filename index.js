@@ -1,11 +1,18 @@
-// Javascript Arrays Interview
-// -> 6)Add an item to the end of an array.
+// factory method 
+const userMethods = {
+    greet() {
+        console.log(`Hi, I'm ${this.name}`);
+        
+    }
+}
 
-var array = [1, 2, 3, 4, 5];
-//method 1
-array.push("Apple")
-console.log(array);
+function createUser(name) {
+    const user = Object.create(userMethods);
+    user.name = name;
+    return user;
+}
 
-// method 2 
-array[array.length] = "Biscuit"
-console.log(array);
+const u1 = createUser("anbu");
+u1.greet();
+const u2 = createUser("anu")
+u2.greet()
