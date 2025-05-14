@@ -856,6 +856,29 @@ u1.greet();
 const u2 = createUser("anu")
 u2.greet()
 
+# Inheritance 
+class Animal {
+    constructor(name) {
+        this.name = name;
+    
+    }
+
+
+    speak() {
+        console.log(`${this.name} makes a sound`);
+    
+    }
+}
+
+class Dog extends Animal {
+    speak() {
+        console.log(`${this.name} barks.`);
+        
+    }
+}
+
+let d = new Animal("Rex");
+d.speak();
 ## Javascript Arrays Interview
 #  -> 1) Create an Array object
 //method 1 
