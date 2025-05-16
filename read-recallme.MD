@@ -100,3 +100,71 @@ console.log(p.constructor === Person);
 
 let p2 = new p.constructor("Bob");
 console.log(p2.name);
+
+# Enumerating properties of an Object
+const user = {
+    name: "anbu",
+    getFullName() {
+        console.log(`Hi My Name is ${this.name}`);
+        
+    }
+}
+
+
+
+for(let key in user){
+    console.log(key, user[key]);
+    
+}
+
+for (let key of Object.keys(user)) {
+    console.log(key);
+    
+}
+
+for (let entry of Object.entries(user)) {
+    console.log(entry);
+    
+} 
+
+if ("name" in user) {
+    console.log("Yes!");
+    
+}
+
+ # Cloning Arrays 
+let fruits = ["apple", "Orange"];
+let clone = [...fruits];
+
+console.log(clone);
+//Cloning Objects 
+
+let person = { name: "Alice", age: 25 };
+let clone1 = { ...person };
+clone1.age = 30;
+console.log(clone1);
+
+//Merging Objects
+
+let contact = { emial: "a@example.com" };
+let fullInfo = { ...person, ...contact }
+console.log(fullInfo);
+ 
+//Shallow copy Warning 
+
+let obj = {
+    name: "Anbu",
+    address: {
+        city: "New York"
+    }
+    
+};
+
+let clone2 = { ...obj };
+clone2.address.city = "London";
+console.log(obj.address.city);
+
+let str = "Hello"
+let charArray = [...str];
+
+console.log(charArray.reverse());

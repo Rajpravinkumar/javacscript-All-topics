@@ -1,29 +1,36 @@
-const user = {
-    name: "anbu",
-    getFullName() {
-        console.log(`Hi My Name is ${this.name}`);
-        
+ //Cloning Arrays 
+let fruits = ["apple", "Orange"];
+let clone = [...fruits];
+
+console.log(clone);
+//Cloning Objects 
+
+let person = { name: "Alice", age: 25 };
+let clone1 = { ...person };
+clone1.age = 30;
+console.log(clone1);
+
+//Merging Objects
+
+let contact = { emial: "a@example.com" };
+let fullInfo = { ...person, ...contact }
+console.log(fullInfo);
+ 
+//Shallow copy Warning 
+
+let obj = {
+    name: "Anbu",
+    address: {
+        city: "New York"
     }
-}
-
-
-
-for(let key in user){
-    console.log(key, user[key]);
     
-}
+};
 
-for (let key of Object.keys(user)) {
-    console.log(key);
-    
-}
+let clone2 = { ...obj };
+clone2.address.city = "London";
+console.log(obj.address.city);
 
-for (let entry of Object.entries(user)) {
-    console.log(entry);
-    
-} 
+let str = "Hello"
+let charArray = [...str]
 
-if ("name" in user) {
-    console.log("Yes!");
-    
-}
+console.log(charArray.reverse());
