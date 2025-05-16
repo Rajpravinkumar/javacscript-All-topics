@@ -1,30 +1,29 @@
-// constructor
-let name = String("Anbu")
-//let name = "Anbu"
-
-console.log(name);
-
-// with classes 
-class Animal {
-    constructor(type) {
-        this.type = type;
-    }
-}
-let a = new Animal("Dog");
-console.log(a.constructor === Animal);
-
-
-// Example 
-class Person {
-    constructor(name) {
-        this.name = name;
+const user = {
+    name: "anbu",
+    getFullName() {
+        console.log(`Hi My Name is ${this.name}`);
+        
     }
 }
 
-let p = new Person("Alice");
 
-console.log(p.constructor === Person); 
 
-let p2 = new p.constructor("Bob");
-console.log(p2.name);
+for(let key in user){
+    console.log(key, user[key]);
+    
+}
 
+for (let key of Object.keys(user)) {
+    console.log(key);
+    
+}
+
+for (let entry of Object.entries(user)) {
+    console.log(entry);
+    
+} 
+
+if ("name" in user) {
+    console.log("Yes!");
+    
+}
