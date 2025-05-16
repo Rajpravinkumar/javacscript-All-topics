@@ -1,33 +1,49 @@
-//Dynamic Objects
-let person = {};
+//String object represent and manipulate a sequence of character , strings can be primitive or objects , but js automatically convert between them when needed
 
-//add properties dynamically
-person.name = "Alice";
-person.age = 20;
+let str = "Hello World"; //string
 
-let key = "email";
-person[key] = "alice@gmail.com"
-//Add a Method
-person.greet = function () {
-  console.log(`Hi, I'm ${this.name} ,My email is  ${this.email}`);
-};
-delete person.age;
-//console.log(person);
-person.greet();
+let strObj = new String("Hello World!") //object
 
-for (let key in person) {
-  console.log(`${key}: ${person[key]}`);
-}
+let message = "Hello , JavaScript";
 
-//Example with Dynamic keys 
-function createDynamicObject(key, value) {
-    return {
-        [key]: value
+//length 
+message.length; // 18
 
-    };
+//Access Characters
+message.charAt(0);
+message[0];
 
-}
+// Case conversion
+message.toUpperCase();
+message.toLowerCase();
+//search 
+message.indexOf("java")
+message.includes("Java");
+//Extraxt substrings
+message.slice(7, 12);
+message.substring(7, 12);
 
-let obj = createDynamicObject("Score", 100);
-console.log(obj);
+//Replace
+message.replace("JavaScript", "JS!")
+
+//split 
+message.split(" , ");
+
+//Trim WhiteSpace 
+let name = "   John Doe  "
+let trimmed = name.trim();
+console.log(trimmed);
+console.log(name.length); //13
+console.log(trimmed.length); // 8
+
+
+//Strinh Object Vs Primitive
+
+let primitive = "abc"; //string
+let non_primitive = new String("abc"); //object
+
+console.log(primitive === non_primitive); //false
+console.log(primitive == non_primitive); //true
+
+
 
