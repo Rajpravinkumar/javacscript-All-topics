@@ -982,3 +982,4 @@ console.log(array);
 // method 2 
 array[array.length] = "Biscuit"
 console.log(array);
+
